@@ -39,7 +39,7 @@ import java.util.concurrent.TimeUnit
 class MainActivity : ComponentActivity() {
 
     // 1. ടൈമർ റീസെറ്റ് ചെയ്യാൻ വേണ്ടിയുള്ള വേരിയബിൾ
-    private val lastInteractionTime = mutableStateOf(System.currentTimeMillis())
+    private val lastInteractionTime = mutableLongStateOf(System.currentTimeMillis())
 
     // 2. സ്ക്രീനിൽ എവിടെ തൊട്ടാലും ഈ ഫംഗ്ഷൻ ടൈമർ റീസെറ്റ് ചെയ്യും
     override fun dispatchTouchEvent(ev: android.view.MotionEvent?): Boolean {
